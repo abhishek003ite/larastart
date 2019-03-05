@@ -53,39 +53,41 @@
                     <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body">
-                    <div class="form-group">
-                        <select name="members" v-model="form.members" id="members" class="form-control" :class="{ 'is-invalid' : form.errors.has('members') }">
-                            <option value="">Select Members</option>
-                            <option value="1">Abhishek Shrivastava</option>
-                            <option value="2">Femi Adeko</option>
-                        </select>
-                        <has-error :form="form" field="members"></has-error>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" placeholder="Preacher Name" name="preacher_name" id="preacher_name" v-model="form.preacher_name" class="form-control" :class="{ 'is-invalid' : form.errors.has('preacher_name') }">
-                        <has-error :form="form" field="preacher_name"></has-error>
-                    </div>
+                    <form @submit.prevent="createWordlog">
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <select name="members" v-model="form.members" id="members" class="form-control" :class="{ 'is-invalid' : form.errors.has('members') }">
+                                <option value="">Select Members</option>
+                                <option value="1">Abhishek Shrivastava</option>
+                                <option value="2">Femi Adeko</option>
+                            </select>
+                            <has-error :form="form" field="members"></has-error>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Preacher Name" name="preacher_name" id="preacher_name" v-model="form.preacher_name" class="form-control" :class="{ 'is-invalid' : form.errors.has('preacher_name') }">
+                            <has-error :form="form" field="preacher_name"></has-error>
+                        </div>
 
-                    <div class="form-group">
-                        <input type="text" placeholder="Topic Preached" name="topic" id="topic" v-model="form.topic" class="form-control" :class="{ 'is-invalid' : form.errors.has('topic') }">
-                        <has-error :form="form" field="topic"></has-error>
+                        <div class="form-group">
+                            <input type="text" placeholder="Topic Preached" name="topic" id="topic" v-model="form.topic" class="form-control" :class="{ 'is-invalid' : form.errors.has('topic') }">
+                            <has-error :form="form" field="topic"></has-error>
+                        </div>
+                        <div class="form-group">
+                            <input type="date" placeholder="Date Preached" name="date_preached" id="date_preached" v-model="form.date_preached" class="form-control" :class="{ 'is-invalid' : form.errors.has('date_preached') }">
+                            <has-error :form="form" field="date_preached"></has-error>
+                        </div>
+                        <div class="form-group">
+                            <textarea v-model="form.message" name="message" id="message"
+                            placeholder="Message"
+                            class="form-control" :class="{ 'is-invalid': form.errors.has('message') }"></textarea>
+                            <has-error :form="form" field="message"></has-error>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <input type="date" placeholder="Date Preached" name="date_preached" id="date_preached" v-model="form.date_preached" class="form-control" :class="{ 'is-invalid' : form.errors.has('date_preached') }">
-                        <has-error :form="form" field="date_preached"></has-error>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Share With Members</button>
                     </div>
-                    <div class="form-group">
-                        <textarea v-model="form.message" name="message" id="message"
-                        placeholder="Message"
-                        class="form-control" :class="{ 'is-invalid': form.errors.has('message') }"></textarea>
-                        <has-error :form="form" field="message"></has-error>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Share With Members</button>
-                </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -105,6 +107,11 @@
                     uploadFile : '',
                     checkRadio : ''
                 })
+            }
+        },
+        methods: {
+            createWordlog() {
+                this.form.post('api/wordlog');
             }
         },
         mounted() {
