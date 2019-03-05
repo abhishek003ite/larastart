@@ -8,6 +8,11 @@
 require('./bootstrap');
 
 window.Vue = require('vue');
+import { Form, HasError, AlertError } from 'vform';
+
+window.Form = Form;
+Vue.component(HasError.name, HasError)
+Vue.component(AlertError.name, AlertError)
 
 import VueRouter from 'vue-router';
 
@@ -16,7 +21,7 @@ Vue.use(VueRouter);
 let routes = [
     { path: '/dashboard', component: require('./components/member/dashboard/DashboardComponent.vue').default },
     // { path: '/bible', component: Foo },
-    // { path: '/word-log', component: Foo },
+    { path: '/word-log', component: require('./components/member/wordlog/WordlogComponent.vue').default },
     // { path: '/voice-note', component: Foo },
     // { path: '/event-videos', component: Foo },
     // { path: '/news-bulletin', component: Foo },
@@ -35,7 +40,8 @@ let routes = [
 ];
 
 const router = new VueRouter({
-    routes //short for 'routes: routes'
+    routes, //short for 'routes: routes',
+    hashbang: false
 });
 
 /**

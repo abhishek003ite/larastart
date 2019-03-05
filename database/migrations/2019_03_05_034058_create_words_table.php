@@ -15,6 +15,16 @@ class CreateWordsTable extends Migration
     {
         Schema::create('words', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->timestamp('date_created')->useCurrent();
+            $table->longText('members');
+            $table->string('preacher_name')->nullable();
+            $table->string('topic')->nullable();
+            $table->longText('message')->nullable();
+            $table->text('uploadFile')->nullable();
+            $table->string('checkRadio')->nullable();
+            $table->timestamp('later_date')->useCurrent();
+            $table->timestamp('date_preached')->useCurrent();
+            $table->tinyInteger('emailSent')->default(0);
             $table->timestamps();
         });
     }
