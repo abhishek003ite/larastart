@@ -14,7 +14,7 @@ class AudioNoteController extends Controller
      */
     public function index()
     {
-        //
+        return AudioNote::latest()->paginate(10);
     }
 
     /**
@@ -35,7 +35,19 @@ class AudioNoteController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'members'       =>  'required',
+            'minister' =>  'required|string|max:150',
+            'title'         =>  'required|string|max:200',
+            'date_of_event' =>  'required|date'
+        ]);
+        return AudioNote::create([
+            'members'   =>  $request['members'],
+            'minister'  =>  $request['minister'],
+            'title'     =>  $request['title'],
+            'link'      =>  $request['link'],
+            'date_of_event' => $request['date_of_event']
+        ]);
     }
 
     /**

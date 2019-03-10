@@ -114,11 +114,19 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </router-link>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-bible"></i>
+            <router-link to="/voice-note" class="nav-link">
+                <i class="nav-icon fas fa-microphone-alt"></i>
                 <p>
-                    Bible
+                    Voice Note
                 </p>
+            </router-link>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-video"></i>
+              <p>
+                Event Videos
+              </p>
             </a>
           </li>
           <li class="nav-item">
@@ -128,22 +136,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     Word Log
                 </p>
             </router-link>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-microphone-alt"></i>
-                <p>
-                    Voice Note
-                </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-video"></i>
-                <p>
-                    Event Videos
-                </p>
-            </a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">

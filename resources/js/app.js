@@ -8,21 +8,43 @@
 require('./bootstrap');
 
 window.Vue = require('vue');
+//vForm Code
 import { Form, HasError, AlertError } from 'vform';
-
+//momentjs Import
+import moment from 'moment';
+//Vue Progress Bar Import
+import VueProgressBar from 'vue-progressbar'
 window.Form = Form;
 Vue.component(HasError.name, HasError)
 Vue.component(AlertError.name, AlertError)
+
+import swal from 'sweetalert2';
+window.swal = swal;
+
+const Toast = swal.mixin({
+    toast: true,
+    position: 'top-end',
+    showConfirmButton: false,
+    timer: 3000
+  });
+
+  window.toast = Toast;
 
 import VueRouter from 'vue-router';
 
 Vue.use(VueRouter);
 
+Vue.use(VueProgressBar, {
+    color: 'rgb(143, 255, 199)',
+    failedColor: 'red',
+    height: '2px'
+});
+
 let routes = [
     { path: '/dashboard', component: require('./components/member/dashboard/DashboardComponent.vue').default },
     // { path: '/bible', component: Foo },
-    { path: '/word-log', component: require('./components/member/wordlog/WordlogComponent.vue').default },
-    // { path: '/voice-note', component: Foo },
+    { path: '/word-log', component: require('./components/admin/wordlog/WordlogComponent.vue').default },
+    { path: '/voice-note', component: require('./components/admin/audioNote/AudioComponent.vue').default },
     // { path: '/event-videos', component: Foo },
     // { path: '/news-bulletin', component: Foo },
     // { path: '/testimony', component: Foo },
@@ -44,24 +66,17 @@ const router = new VueRouter({
     hashbang: false
 });
 
-/**
- * The following block of code may be used to automatically register your
- * Vue components. It will recursively scan this directory for the Vue
- * components and automatically register them with their "basename".
- *
- * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
- */
+Vue.filter('upText', function(text) {
+    return text.charAt(0).toUpperCase() + text.slice(1);
+});
 
-// const files = require.context('./', true, /\.vue$/i);
-// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
+Vue.filter('myDate', function(dateCreated) {
+    return moment(dateCreated).format('Do MMMM YYYY');
+});
+
+window.Fire = new Vue();
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
 
 const app = new Vue({
     el: '#app',

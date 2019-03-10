@@ -14,7 +14,7 @@ class WordsController extends Controller
      */
     public function index()
     {
-        //
+        return Words::latest()->paginate(10);
     }
 
     /**
@@ -35,7 +35,22 @@ class WordsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'members'       =>  'required',
+            'preacher_name' =>  'required|string|max:150',
+            'topic'         =>  'required|string|max:200',
+            'date_preached' =>  'required|date',
+            'message'       =>  'required|max:200'
+        ]);
+        return Words::create([
+            'members'   =>  $request['members'],
+            'preacher_name' =>  $request['preacher_name'],
+            'topic'     =>  $request['topic'],
+            'date_preached' =>  $request['date_preached'],
+            'message'   =>  $request['message'],
+            'uploadFile'    =>  $request['uploadFile'],
+            'checkRadio'    =>  $request['checkRadio']
+        ]);
     }
 
     /**
@@ -67,9 +82,18 @@ class WordsController extends Controller
      * @param  \App\model\words  $words
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, words $words)
+    public function update(Request $request, $id)
     {
-        //
+        $words = Words::findOrFail($id);
+        $this->validate($request, [
+            'members'       =>  'required',
+            'preacher_name' =>  'required|string|max:150',
+            'topic'         =>  'required|string|max:200',
+            'date_preached' =>  'required|date',
+            'message'       =>  'required|max:200'
+        ]);
+        $words->update($request->all());
+        return ['message' => 'Updated'];
     }
 
     /**
@@ -78,8 +102,13 @@ class WordsController extends Controller
      * @param  \App\model\words  $words
      * @return \Illuminate\Http\Response
      */
-    public function destroy(words $words)
+    public function destroy($id)
     {
-        //
+        $words = Words::findOrFail($id);
+
+        //Delete WordLog
+        $words->delete();
+
+        return ['message' => 'WordLog Deleted.'];
     }
 }
