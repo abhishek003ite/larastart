@@ -33,7 +33,7 @@ class AddVoiceNoteFields extends Migration
      */
     public function down()
     {
-        Schema::table('users', function($table) {
+        Schema::table('audio_notes', function($table) {
             $table->dropColumn('date_of_event');
             $table->dropColumn('members');
             $table->dropColumn('title');

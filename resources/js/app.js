@@ -41,12 +41,11 @@ Vue.use(VueProgressBar, {
 });
 
 let routes = [
-    { path: '/dashboard', component: require('./components/member/dashboard/DashboardComponent.vue').default },
-    // { path: '/bible', component: Foo },
+    { path: '/dashboard', component: require('./components/admin/dashboard/DashboardComponent.vue').default },
     { path: '/word-log', component: require('./components/admin/wordlog/WordlogComponent.vue').default },
     { path: '/voice-note', component: require('./components/admin/audioNote/AudioComponent.vue').default },
-    // { path: '/event-videos', component: Foo },
-    // { path: '/news-bulletin', component: Foo },
+    { path: '/event-videos', component: require('./components/admin/eventVideos/EventVideoComponent.vue').default },
+    // { path: '/news-bulletin', component: require('./components/admin/newsBulletin/NewsBulletinComponent.vue').default },
     // { path: '/testimony', component: Foo },
     // { path: '/prayer-request', component: Foo },
     // { path: '/keeper-network', component: Foo },

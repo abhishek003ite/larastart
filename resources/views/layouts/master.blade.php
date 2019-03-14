@@ -22,7 +22,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" href="#"><i class="fa fa-bars"></i></a>
       </li>
-      
+
     </ul>
 
     <!-- SEARCH FORM -->
@@ -69,7 +69,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           </a>
         </div>
       </li>
-      
+
     </ul>
     <!-- Right navbar links -->
   </nav>
@@ -103,7 +103,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-          
+
           <li class="nav-item">
             <router-link to="/dashboard" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt text-blue"></i>
@@ -113,142 +113,77 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </p>
             </router-link>
           </li>
-          <li class="nav-item">
-            <router-link to="/voice-note" class="nav-link">
-                <i class="nav-icon fas fa-microphone-alt"></i>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-microphone-alt text-indigo"></i>
                 <p>
                     Voice Note
+                    <i class="right fas fa-angle-left"></i>
                 </p>
-            </router-link>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-video"></i>
-              <p>
-                Event Videos
-              </p>
             </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <router-link to="/voice-note" class="nav-link">
+                        <i class="fas fa-user nav-icon"></i>
+                        <p>Manage Voice Note</p>
+                    </router-link>
+                </li>
+            </ul>
           </li>
-          <li class="nav-item">
-            <router-link to="/word-log" class="nav-link">
-                <i class="nav-icon fas fa-atlas"></i>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-video text-purple"></i>
+                <p>
+                    Event Videos
+                    <i class="right fas fa-angle-left"></i>
+                </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <router-link to="/event-videos" class="nav-link">
+                        <i class="fas fa-user nav-icon"></i>
+                        <p>Manage Event Videos</p>
+                    </router-l>
+                </li>
+            </ul>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-atlas text-pink"></i>
                 <p>
                     Word Log
+                    <i class="right fas fa-angle-left"></i>
                 </p>
-            </router-link>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <router-link to="/word-log" class="nav-link">
+                        <i class="fas fa-user nav-icon"></i>
+                        <p>Manage Word Logs</p>
+                    </router-link>
+                </li>
+            </ul>
           </li>
-          <li class="nav-item">
+          <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-newspaper"></i>
+                <i class="nav-icon fas fa-newspaper text-red"></i>
                 <p>
                     News & Bulletin
-                </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-pencil-alt"></i>
-                <p>
-                    Testimony
-                </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-praying-hands"></i>
-                <p>
-                    Prayer Request
-                </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-users"></i>
-                <p>
-                    Keepers' Network
-                </p>
-            </a>
-          </li>
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-memory"></i>
-                <p>
-                    Mempacas
                     <i class="right fas fa-angle-left"></i>
                 </p>
             </a>
             <ul class="nav nav-treeview">
                 <li class="nav-item">
-                    <a href="#" class="nav-link active">
+                    <router-link to="/news-bulletin" class="nav-link">
                         <i class="fas fa-user nav-icon"></i>
-                        <p>View Group</p>
-                    </a>
+                        <p>Manage News & Bulletin</p>
+                    </router-link>
                 </li>
             </ul>
           </li>
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-memory"></i>
-                <p>
-                    Children Register
-                    <i class="right fas fa-angle-left"></i>
-                </p>
-            </a>
-            <ul class="nav nav-treeview">
-                <li class="nav-item">
-                    <a href="#" class="nav-link ">
-                        <i class="fas fa-user nav-icon"></i>
-                        <p>Add Child</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link ">
-                        <i class="fas fa-user nav-icon"></i>
-                        <p>View Class</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link ">
-                        <i class="fas fa-marker nav-icon"></i>
-                        <p>Mark Attendance</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link ">
-                        <i class="fas fa-bug nav-icon"></i>
-                        <p>Report Incident</p>
-                    </a>
-                </li>
-            </ul>
-          </li>
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-memory"></i>
-                <p>
-                    Parent Dashboard
-                    <i class="right fas fa-angle-left"></i>
-                </p>
-            </a>
-            <ul class="nav nav-treeview">
-                <li class="nav-item">
-                    <a href="#" class="nav-link ">
-                        <i class="fas fa-user nav-icon"></i>
-                        <p>Abhyoday Shrivastava</p>
-                    </a>
-                </li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-hand-holding-usd"></i>
-                <p>
-                    Donate
-                </p>
-            </a>
-          </li>
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-book"></i>
+                <i class="nav-icon fas fa-book text-orange"></i>
                 <p>
                     Book Store
                     <i class="right fas fa-angle-left"></i>
@@ -256,24 +191,539 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </a>
             <ul class="nav nav-treeview">
                 <li class="nav-item">
-                    <a href="#" class="nav-link ">
+                    <router-link to="/word-log" class="nav-link">
                         <i class="fas fa-user nav-icon"></i>
-                        <p>Book Store</p>
-                    </a>
+                        <p>Manage Book Stores</p>
+                    </router-link>
+                </li>
+            </ul>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-key text-yellow"></i>
+                <p>
+                    Codes
+                    <i class="right fas fa-angle-left"></i>
+                </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <router-link to="/word-log" class="nav-link">
+                        <i class="fas fa-user nav-icon"></i>
+                        <p>Manage Codes</p>
+                    </router-link>
+                </li>
+            </ul>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-list-alt text-green"></i>
+                <p>
+                    Adverts
+                    <i class="right fas fa-angle-left"></i>
+                </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <router-link to="/word-log" class="nav-link">
+                        <i class="fas fa-user nav-icon"></i>
+                        <p>Manage Advert</p>
+                    </router-link>
+                </li>
+            </ul>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-list text-teal"></i>
+                <p>
+                    Attendance
+                    <i class="right fas fa-angle-left"></i>
+                </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <router-link to="/word-log" class="nav-link">
+                        <i class="fas fa-user nav-icon"></i>
+                        <p>Manage Attendance</p>
+                    </router-link>
+                </li>
+            </ul>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-check text-cyan"></i>
+                <p>
+                    Reports
+                    <i class="right fas fa-angle-left"></i>
+                </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <router-link to="/word-log" class="nav-link">
+                        <i class="fas fa-user nav-icon"></i>
+                        <p>Generate Reports</p>
+                    </router-link>
+                </li>
+            </ul>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-users text-blue"></i>
+                <p>
+                    Members
+                    <i class="right fas fa-angle-left"></i>
+                </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <router-link to="/word-log" class="nav-link">
+                        <i class="fas fa-user nav-icon"></i>
+                        <p>Manage Members</p>
+                    </router-link>
                 </li>
                 <li class="nav-item">
+                    <router-link to="/word-log" class="nav-link">
+                        <i class="fas fa-user nav-icon"></i>
+                        <p>Deactivated Members</p>
+                    </router-link>
+                </li>
+                <li class="nav-item">
+                    <router-link to="/word-log" class="nav-link">
+                        <i class="fas fa-user nav-icon"></i>
+                        <p>Deleted Members</p>
+                    </router-link>
+                </li>
+            </ul>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-users text-indigo"></i>
+                <p>
+                    H.O.D. / Workers
+                    <i class="right fas fa-angle-left"></i>
+                </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
                     <a href="#" class="nav-link">
-                        <i class="fas fa-book nav-icon"></i>
-                        <p>My Books</p>
+                        <i class="fas fa-user nav-icon"></i>
+                        <p>Manage H.O.D. / Workers</p>
                     </a>
                 </li>
             </ul>
           </li>
-          <li class="nav-item">
+          <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
-            <i class="nav-icon fas fa-search-plus"></i>
-            <p>Search</p>
+                <i class="nav-icon fas fa-layer-group text-purple"></i>
+                <p>
+                    Mempacas
+                    <i class="right fas fa-angle-left"></i>
+                </p>
             </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-user nav-icon"></i>
+                        <p>Manage Group</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-user nav-icon"></i>
+                        <p>General In Charge</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-user nav-icon"></i>
+                        <p>Urgent Attention</p>
+                    </a>
+                </li>
+            </ul>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-users text-pink"></i>
+                <p>
+                    Children Register
+                    <i class="right fas fa-angle-left"></i>
+                </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-user nav-icon"></i>
+                        <p>Manage Class</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-user nav-icon"></i>
+                        <p>Mark Attendance</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-user nav-icon"></i>
+                        <p>Class Teacher</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-user nav-icon"></i>
+                        <p>Incident Reports</p>
+                    </a>
+                </li>
+            </ul>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-users text-red"></i>
+                <p>
+                    First Timer
+                    <i class="right fas fa-angle-left"></i>
+                </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-user nav-icon"></i>
+                        <p>Manage First Timer</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-user nav-icon"></i>
+                        <p>Monthly First Timer</p>
+                    </a>
+                </li>
+            </ul>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-users text-orange"></i>
+                <p>
+                    Christ Converts
+                    <i class="right fas fa-angle-left"></i>
+                </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-user nav-icon"></i>
+                        <p>Manage Christ Convert</p>
+                    </a>
+                </li>
+            </ul>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-users text-yellow"></i>
+                <p>
+                    Admins
+                    <i class="right fas fa-angle-left"></i>
+                </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-user nav-icon"></i>
+                        <p>Manage Admin</p>
+                    </a>
+                </li>
+            </ul>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-credit-card text-green"></i>
+                <p>
+                    Collections
+                    <i class="right fas fa-angle-left"></i>
+                </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-pound-sign nav-icon"></i>
+                        <p>Manage Donations</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-pound-sign nav-icon"></i>
+                        <p>Manage Offering Collected</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-pound-sign nav-icon"></i>
+                        <p>Manage Tithes Received</p>
+                    </a>
+                </li>
+            </ul>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-comments text-teal"></i>
+                <p>
+                    Chat
+                    <i class="right fas fa-angle-left"></i>
+                </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-user nav-icon"></i>
+                        <p>Chat W/ Member</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-user nav-icon"></i>
+                        <p>Chat W/ Admin</p>
+                    </a>
+                </li>
+            </ul>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-object-group text-cyan"></i>
+                <p>
+                    Group
+                    <i class="right fas fa-angle-left"></i>
+                </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-user nav-icon"></i>
+                        <p>Manage Church Group</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-user nav-icon"></i>
+                        <p>Manage Business Group</p>
+                    </a>
+                </li>
+
+            </ul>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-flag-checkered text-blue"></i>
+                <p>
+                    Notifications
+                    <i class="right fas fa-angle-left"></i>
+                </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-praying-hands nav-icon"></i>
+                        <p>Prayer Requests</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-praying-hand nav-icon"></i>
+                        <p>Testimonies</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-praying-hand nav-icon"></i>
+                        <p>Group Activities</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-praying-hand nav-icon"></i>
+                        <p>Birthdays</p>
+                    </a>
+                            </li>
+                            <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="fas fa-praying-hand nav-icon"></i>
+                                        <p>Page Verifications</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                        <a href="#" class="nav-link">
+                                            <i class="fas fa-praying-hand nav-icon"></i>
+                                            <p>Business Offers</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <i class="fas fa-praying-hand nav-icon"></i>
+                                                <p>Keepers' Network</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                                <a href="#" class="nav-link">
+                                                    <i class="fas fa-praying-hand nav-icon"></i>
+                                                    <p>Event Attendance</p>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                    <a href="#" class="nav-link">
+                                                        <i class="fas fa-praying-hand nav-icon"></i>
+                                                        <p>Contact Us</p>
+                                                    </a>
+                                                </li>
+            </ul>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-sms text-indigo"></i>
+                <p>
+                    Send SMS
+                    <i class="right fas fa-angle-left"></i>
+                </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-user nav-icon"></i>
+                        <p>Send To Member</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-user nav-icon"></i>
+                        <p>Send By Gender</p>
+                    </a>
+                </li>
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-user nav-icon"></i>
+                        <p>Send By Group<i class="right fas fa-angle-left"></i></p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-user nav-icon"></i>
+                                <p>Church</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-user nav-icon"></i>
+                                <p>Business</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-user nav-icon"></i>
+                        <p>History</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-user nav-icon"></i>
+                        <p>Topup SMS Account</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-user nav-icon"></i>
+                        <p>Topup History</p>
+                    </a>
+                </li>
+            </ul>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-mail-bulk text-purple"></i>
+                <p>
+                    Send Email
+                    <i class="right fas fa-angle-left"></i>
+                </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-user nav-icon"></i>
+                        <p>Send To Member</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-transgender-alt nav-icon"></i>
+                        <p>Send By Gender</p>
+                    </a>
+                </li>
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-object-group nav-icon"></i>
+                        <p>Send By group <i class="right fas fa-angle-left"></i></p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-user nav-icon"></i>
+                                <p>Church</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-user nav-icon"></i>
+                                <p>Business</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-history nav-icon"></i>
+                        <p>Email History</p>
+                    </a>
+                </li>
+            </ul>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-cog text-red"></i>
+                <p>
+                    Settings
+                    <i class="right fas fa-angle-left"></i>
+                </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-cog nav-icon"></i>
+                        <p>General Setting</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-mailchimp nav-icon"></i>
+                        <p>Registration Email</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-object-group nav-icon"></i>
+                        <p>Age Group Setting</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-mail-bulk nav-icon"></i>
+                        <p>Other Email</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-sms nav-icon"></i>
+                        <p>All SMS</p>
+                    </a>
+                </li>
+            </ul>
           </li>
         </ul>
       </nav>
@@ -299,10 +749,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <footer class="main-footer">
     <!-- To the right -->
     <div class="float-right d-none d-sm-inline">
-      Anything you want
+      Membership Management System
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2014-2018 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+    <strong>Copyright &copy; 2018-<?= date('Y') ?> <a href="https://mmsonline.website">Membership Management System</a>.</strong> All rights reserved.
   </footer>
 </div>
 <!-- ./wrapper -->
