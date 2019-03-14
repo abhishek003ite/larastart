@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\model\words;
 use Illuminate\Http\Request;
+use App\model\member;
 
 class WordsController extends Controller
 {
@@ -24,7 +25,7 @@ class WordsController extends Controller
      */
     public function create()
     {
-        //
+        return words::latest()->paginate(10);
     }
 
     /**
@@ -62,6 +63,10 @@ class WordsController extends Controller
     public function show(words $words)
     {
         //
+    }
+
+    public function allMembers() {
+
     }
 
     /**

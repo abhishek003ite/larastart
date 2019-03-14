@@ -17,9 +17,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::apiResources([
-    'wordlog'   =>  'WordsController'
-]);
+Route::resource('/wordlog', 'WordsController');
 
 Route::apiResources([
     'audioNote' =>  'AudioNoteController'

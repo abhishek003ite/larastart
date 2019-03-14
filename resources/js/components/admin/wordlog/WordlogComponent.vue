@@ -59,8 +59,9 @@
                         <div class="form-group">
                             <select name="members" v-model="form.members" id="members" class="form-control" :class="{ 'is-invalid' : form.errors.has('members') }">
                                 <option value="">Select Members</option>
-                                <option value="1">Abhishek Shrivastava</option>
-                                <option value="2">Femi Adeko</option>
+                                <!-- <option value="1">Abhishek Shrivastava</option>
+                                <option value="2">Femi Adeko</option> -->
+                                <option v-for="member in allMembers" :value="member.id">{{ member.preacher_name }}</option>
                             </select>
                             <has-error :form="form" field="members"></has-error>
                         </div>
@@ -102,6 +103,7 @@
             return {
                 editMode: false,
                 wordlog : {},
+                allMembers: {},
                 form: new Form({
                     id: '',
                     members : '',
@@ -157,6 +159,7 @@
             },
             loadWordlog() {
                 axios.get("api/wordlog").then(({ data }) => (this.wordlog = data.data));
+                axios.get("api/wordlog/create").then(({ data }) => (this.allMembers = data.data));
             },
             updateWordlog() {
                 this.$Progress.start();
