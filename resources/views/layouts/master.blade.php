@@ -557,7 +557,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     <li class="nav-item">
                                             <a href="#" class="nav-link">
                                                 <i class="fas fa-praying-hand nav-icon"></i>
-                                                <p>Keepers' Network</p>
+                                                <p>Keepers Network</p>
                                             </a>
                                         </li>
                                         <li class="nav-item">
