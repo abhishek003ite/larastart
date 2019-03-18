@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -208,7 +207,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </a>
             <ul class="nav nav-treeview">
                 <li class="nav-item">
-                    <router-link to="/word-log" class="nav-link">
+                    <router-link to="/codes" class="nav-link">
                         <i class="fas fa-user nav-icon"></i>
                         <p>Manage Codes</p>
                     </router-link>

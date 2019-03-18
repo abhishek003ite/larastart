@@ -45,19 +45,7 @@ let routes = [
     { path: '/word-log', component: require('./components/admin/wordlog/WordlogComponent.vue').default },
     { path: '/voice-note', component: require('./components/admin/audioNote/AudioComponent.vue').default },
     { path: '/event-videos', component: require('./components/admin/eventVideos/EventVideoComponent.vue').default },
-    // { path: '/news-bulletin', component: require('./components/admin/newsBulletin/NewsBulletinComponent.vue').default },
-    // { path: '/testimony', component: Foo },
-    // { path: '/prayer-request', component: Foo },
-    // { path: '/keeper-network', component: Foo },
-    // { path: '/mempacas/view-group', component: Foo },
-    // { path: '/children-register/add-child', component: Foo },
-    // { path: '/children-register/view-class', component: Foo },
-    // { path: '/children-register/mark-attendance', component: Foo },
-    // { path: '/children-register/report-incident', component: Foo },
-    // { path: '/donate', component: Foo },
-    // { path: '/book-store/book-store', component: Foo },
-    // { path: '/book-store/my-books', component: Foo },
-    // { path: '/search', component: Foo },
+    { path: '/codes', component: require('./components/admin/codes/CodesComponent.vue').default }
 ];
 
 const router = new VueRouter({

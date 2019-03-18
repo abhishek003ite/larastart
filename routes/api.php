@@ -19,6 +19,11 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::resource('/wordlog', 'WordsController');
 
+//Codes Resource
+
+Route::resource('/codes', 'CodeController');
+
+
 Route::apiResources([
     'audioNote' =>  'AudioNoteController'
 ]);
